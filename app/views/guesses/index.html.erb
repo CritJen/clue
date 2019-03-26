@@ -1,0 +1,4 @@
+<h2>Your Guesses:</h2>
+<% @guesses.each do |guess| %>
+<%= guess.person.name %> | <%= guess.weapon.name %> | <%= guess.room.name %>
+<% end %>

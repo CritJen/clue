@@ -1,0 +1,8 @@
+<h2>Notepad:</h2>
+<ul>
+  <% @notes.each do |note| %>
+  <li><%= note.text %></li>
+<% end %>
+</ul>
+
+Return to the <%= link_to "Foyer", rooms_path %>

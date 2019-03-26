@@ -1,0 +1,4 @@
+<h2><%= @person.name %></h2>
+<p><%= @person.note %></p>
+
+Continue searching the <%= link_to @person.room.name, room_path(@person.room) %>

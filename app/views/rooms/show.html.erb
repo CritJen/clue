@@ -1,0 +1,11 @@
+<h1><%= @room.name %></h1>
+<p><%= @room.note %></p>
+<h4>What would you like to do?</h4> <br>
+<% if @room.weapon%>
+Examine the
+<%= link_to @room.weapon.name, weapon_path(@room.weapon) %>?<br>
+<% end %>
+<% if @room.person%>
+Speak with <%= link_to @room.person.name, person_path(@room.person) %>?<br>
+<% end %>
+Return to the <%= link_to "Foyer", rooms_path %>

@@ -1,0 +1,7 @@
+<h2>Who dun it?</h2>
+<%= form_for @guess do |f| %>
+It was <%= f.collection_select(:person_id, Person.all, :id, :name) %>
+in the <%= f.collection_select(:room_id, Room.all, :id, :name) %>
+with the <%= f.collection_select(:weapon_id, Weapon.all, :id, :name) %>
+<%= f.submit "Venture a Guess" %>
+<% end %>
