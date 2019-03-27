@@ -4,16 +4,66 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 </head>
 
-<h1>Rooms:</h1>
-<ul>
-  <% @rooms.each do |room| %>
-<li>  <%= link_to room.name, room_path(room) %></li>
-  <% end %>
+<body>
+  <!-- Grid row -->
+  <div class="row">
 
-</ul>
-<p>
-  <p>Notepad: 
-   <a href="http://localhost:3000/notes" class="btn btn-info btn-lg">
-     <span class="glyphicon glyphicon-pencil"></span>
-   </a>
- </p>
+    <!-- Grid column -->
+    <div class="col-md-12 d-flex justify-content-center mb-5">
+
+      <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="all">All</button>
+      <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="1">Mountains</button>
+      <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="2">Sea</button>
+
+    </div>
+    <!-- Grid column -->
+
+  </div>
+  <!-- Grid row -->
+
+  <!-- Grid row -->
+  <div class="gallery" id="gallery">
+
+    <!-- Grid column -->
+    <div class="mb-3 pics animation all 2">
+      <img class="img-fluid" src="https://www.kolbisneat.com/wp-content/uploads/2016/05/Clue14.jpg" alt="Card image cap">
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="mb-3 pics animation all 1">
+      <a href="">
+      <img class="img-fluid" src="/assets/kitchen.png" alt="Card image cap">
+      </a>
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="mb-3 pics animation all 1">
+      <a href="loc">
+      <img class="img-fluid" src="http://localhost:3000/rooms/4" alt="Card image cap">
+      </a>
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="mb-3 pics animation all 2">
+      <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" alt="Card image cap">
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="mb-3 pics animation all 2">
+      <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Card image cap">
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="mb-3 pics animation all 1">
+      <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" alt="Card image cap">
+    </div>
+    <!-- Grid column -->
+
+  </div>
+  <!-- Grid row -->
+</body>
