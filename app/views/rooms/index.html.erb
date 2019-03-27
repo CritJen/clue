@@ -1,8 +1,26 @@
-<!DOCTYPE html>
-<html>
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 </head>
+
+<body>
+
+<div class="container">
+  <div class="gallery"></div>
+
+  <div class=”gallery”>
+  <figure class=”gallery__item gallery__item--1">
+    <img src="img/image-1.jpg" class="gallery__img" alt="Image 1">
+  </figure>
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 15px;
+}
+
+</body>
+
 
 <h1>Rooms:</h1>
 <ul>
@@ -11,9 +29,3 @@
   <% end %>
 
 </ul>
-<p>
-  <p>Notepad: 
-   <a href="http://localhost:3000/notes" class="btn btn-info btn-lg">
-     <span class="glyphicon glyphicon-pencil"></span>
-   </a>
- </p>

@@ -1,0 +1,16 @@
+<head>
+
+</head>
+<%= flash[:message] %>
+#let's make this an alert
+<div>
+<%= flash[:message] %>
+</div>
+
+<%= form_tag login_path do %>
+  <%= label_tag :username %>
+  <%= text_field_tag :username %>
+  <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  <%= submit_tag 'Login' %>
+<% end %>

@@ -2,6 +2,7 @@ class Guess < ApplicationRecord
   belongs_to :weapon
   belongs_to :person
   belongs_to :room
+  belongs_to :user
 
   def correct_answer
     if self.person_id == "2" && self.weapon_id == 2 && self.room_id == 2
