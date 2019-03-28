@@ -2,3 +2,7 @@
 <% @guesses.each do |guess| %>
 <%= guess.person.name %> | <%= guess.weapon.name %> | <%= guess.room.name %>
 <% end %>
+
+<h2>You've guesses <%= cookies[:guesses] %> times. </h2>
+
+<h4><%= link_to "Guess Again", new_guess_path %></h4>
