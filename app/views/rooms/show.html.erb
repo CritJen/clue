@@ -1,14 +1,23 @@
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 </head>
-<h1><%= @room.name %></h1>
-<p><%= @room.note %></p>
-<h4>What would you like to do?</h4> <br>
-<% if @room.weapon%>
-Examine the
-<%= link_to @room.weapon.name, weapon_path(@room.weapon) %>?<br>
-<% end %>
-<% if @room.person%>
-Speak with <%= link_to @room.person.name, person_path(@room.person) %>?<br>
-<% end %>
-Return to the <%= link_to "Foyer", rooms_path %>
+
+<body>
+  <div class="body_container">
+    <img src="<%= asset_url @room.image_url %>" alt="" class="chunk">
+    <div class="container room_container">
+      <div class="row">
+        <div class="col-sm">
+          <img src="<%= @room.person.image_url %>" alt="" class="stuff filling">
+          <img src="<%= @room.weapon.image_url %>" alt="" class="stuff">
+        </div>
+    </div>
+          <div class="row">
+            <div class="col-sm">
+            <h1><%= @room.name %></h1>
+            <p><%= @room.note %></p>
+            </div>
+          </div>
+    </div>
+</div>
+
+</body>
