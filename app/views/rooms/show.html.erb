@@ -1,4 +1,9 @@
 <head>
+  <style media="screen">
+    body {
+      background-color: black;
+    }
+  </style>
 </head>
 
 <body>
@@ -7,14 +12,18 @@
     <div class="container room_container">
       <div class="row">
         <div class="col-sm">
-          <img src="<%= @room.person.image_url %>" alt="" class="stuff filling">
+          <% if !@room.person == nil %>
+          <a href="http://localhost:3000/people/<%= @room.person.id %>"><img src="<%= @room.person.image_url %>" alt="" class="stuff filling"></a>
           <img src="<%= @room.weapon.image_url %>" alt="" class="stuff">
+            <% end %>
         </div>
     </div>
           <div class="row">
-            <div class="col-sm">
+            <div class="col-sm text_box">
             <h1><%= @room.name %></h1>
             <p><%= @room.note %></p>
+          <p> Return to the <%= link_to "Hall", rooms_path(@foyer) %> </p>
+          <p>Take a <%= link_to "note", new_note_url %></p>
             </div>
           </div>
     </div>

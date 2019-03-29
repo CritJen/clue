@@ -1,8 +1,16 @@
-<h2>Your Guesses:</h2>
+<head>
+  <style media="screen">
+  
+  </style>
+</head>
+
+<h1>Not Quite!</h1>
+
+<!-- <h2>Your Guesses:</h2>
 <% @guesses.each do |guess| %>
 <%= guess.person.name %> | <%= guess.weapon.name %> | <%= guess.room.name %>
-<% end %>
+<% end %> -->
 
-<h2>You've guesses <%= cookies[:guesses] %> times. </h2>
 
-<h4><%= link_to "Guess Again", new_guess_path %></h4>
+<h4><%= link_to "Guess Again?", new_guess_path %></h4>
+<h4>Return to the <%= link_to "Hall", rooms_path %></h4>
