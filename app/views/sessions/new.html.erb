@@ -24,10 +24,8 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body class="login_bod">
-	<%= flash[:message] %>
-#let's make this an alert
+
 <div>
-<%= flash[:message] %>
 </div>
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
@@ -39,6 +37,7 @@
 
 			 </div>
 			<div class="card-body">
+				<div class="error"> <%= flash[:message] %> </div>
 				<%= form_tag login_path do %>
   <%= label_tag :username %>
   <%= text_field_tag :username %>
@@ -70,7 +69,7 @@
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					Don't have an account?<a href="#">Sign Up</a>
+					Don't have an account?<a href="http://localhost:3000/users/new">Sign Up</a>
 				</div>
 
 			</div>

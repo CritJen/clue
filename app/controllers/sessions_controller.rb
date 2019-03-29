@@ -7,15 +7,20 @@ class SessionsController < ApplicationController
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to rooms_path
+      redirect_to room_path(1)
     else
       flash[:message] = 'Invalid Login'
       redirect_to login_path
     end
   end
 
-  def delete
-    self.destory
+  def destroy
+    session.clear
+    redirect_to login_path
+    flash[:message] = "Logged Out"
   end
+
+  private
+
 
 end
