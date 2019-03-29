@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user= User.new(user_params)
     if @user.valid?
       @user.save
-      redirect_to rooms_path
+      redirect_to room_path(1)
     else
       flash[:messages] = @user.errors.full_messages
       redirect_to new_user_path
