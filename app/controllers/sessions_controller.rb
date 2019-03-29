@@ -14,4 +14,8 @@ class SessionsController < ApplicationController
     end
   end
 
+  def delete
+    self.destory
+  end
+
 end

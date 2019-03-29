@@ -1,6 +1,10 @@
 // Place all the styles related to the rooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.person_bod {
+  background: black;
+}
+
 .room_container {
   position: absolute;
   left: 50%;
@@ -28,11 +32,6 @@
   position: absolute;
   top: -45;
 }
-.body_container {
-  width: 1000px;
-  max-width: 1000px;
-  min-width: 1000px;
-}
 
 h1 {
   color: white;
@@ -42,6 +41,8 @@ p {
   color: grey;
 }
 
-body {
+.text_box {
   background-color: black;
+  border: 10px double grey;
+  margin: 10px;
 }

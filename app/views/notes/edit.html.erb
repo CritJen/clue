@@ -1,0 +1,9 @@
+
+
+<div class="header">New Note:</div>
+<body class="parchment notes">
+<%= form_for @note do |f| %>
+<%= f.text_area :text %>
+<%= f.submit %>
+<% end %>
+</body>

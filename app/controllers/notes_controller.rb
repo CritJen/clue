@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-  before_action :set_note, only: [:show, :update, :edit, :destroy]
+  before_action :set_note, only: [:show, :update, :edit, :delete]
 
     def index
       @notes = Note.all
@@ -20,6 +20,19 @@ class NotesController < ApplicationController
       else
         render :new
       end
+    end
+
+    def edit
+    end
+
+    def update
+      @note.update(note_params)
+
+      redirect_to notes_path
+    end
+
+    def delete
+      @note.destroy
     end
 
   private

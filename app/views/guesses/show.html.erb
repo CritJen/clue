@@ -1,6 +1,11 @@
-<h4>Your Guess</h4>
-<h4>It was <%= @guess.person.name %> in the <%= @guess.room.name %> with the <%= @guess.weapon.name %>.</h4>
+<body>
+  <h4>Your Guess</h4>
 
-<p>Not quite! You have ? guesses left</p>
+  <% @guesses.each do |guess| %>
+<h4>It was <%= guess.person.name %> in the <%= guess.room.name %> with the <%=
+  guess.weapon.name %>.</h4>
+
+<p>Not quite!</p>
 
 Return to the <%= link_to "Foyer", rooms_path %>
+</body>

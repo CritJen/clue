@@ -1,11 +1,24 @@
+
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <style media="screen">
+
+  </style>
 </head>
-<h2>Notepad:</h2>
+<body class="parchment">
+<div class="notes">
+  <div class="header">Notepad:</div>
+
 <ul>
   <% @notes.each do |note| %>
-  <li><%= note.text %></li>
+  <li><%= note.text %></li> <%= link_to "edit", edit_note_path(note.id) %>
 <% end %>
 </ul>
-
+Write a <%= link_to "new note", new_note_url %>
 Return to the <%= link_to "Foyer", rooms_path %>
+Venture a <%= link_to "guess", new_guess_url %>
+
+</div>
+
+
+</body>

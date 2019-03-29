@@ -1,3 +1,21 @@
 // Place all the styles related to the notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.parchment {
+  background-image: url(parchment.jpg);
+}
+
+.notes {
+  margin-top: 150px;
+  margin-left: 150px;
+  font-family: 'Snell Roundhand Script', cursive;
+  // font-family: cursive;
+}
+
+.header {
+  font-size: 70px;
+}
+
+li {
+  font-size: 20px;
+}

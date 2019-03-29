@@ -1,3 +1,29 @@
-<%= @weapon.note %> <br>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <style media="screen">
 
-Continue searching the <%= link_to @weapon.room.name, room_path(@weapon.room) %>
+</style>
+
+</head>
+
+
+<body>
+  <div class="parchment">
+
+
+  <div class="body_container">
+    <img src="<%= asset_url @weapon.image_url %>" alt="" class="">
+
+    <div class="box-1">
+      <%=@weapon.note %>
+    </div>
+    <div class="box-2">
+      <%= @weapon %>
+    </div>
+    <div class="box-3">
+      Continue searching the <%= link_to @weapon.room.name, room_path(@weapon.room) %>
+    </div>
+
+  </div>
+    </div>
+</body>
