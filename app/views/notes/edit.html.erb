@@ -6,4 +6,7 @@
 <%= f.text_area :text %>
 <%= f.submit %>
 <% end %>
+<p></p>
+<%= button_to "Delete", {:controller => :notes,
+      :action => 'destroy', :id => @note.id}, :method => :delete %>
 </body>
