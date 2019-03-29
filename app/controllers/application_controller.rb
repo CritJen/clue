@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
 
   def notepad_icon
-
   end
+
 
 end

@@ -23,6 +23,10 @@
             <div class="col-sm text_box">
             <h1><%= @room.name %></h1>
             <p><%= @room.note %></p>
+            <% if @room.name == "Hall" %>
+            <% else %>
+            <p>Speak with <%=link_to @room.person.name, person_path(@room.person)  %></p>
+            <% end %>
           <p> Return to the <%= link_to "Foyer", rooms_path(@foyer) %> </p>
           <p>Take a <%= link_to "note", new_note_url %></p>
             </div>

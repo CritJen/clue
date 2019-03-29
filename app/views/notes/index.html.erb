@@ -2,7 +2,9 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
   <style media="screen">
-
+    .notes_links {
+      font-size: 18px;
+    }
   </style>
 </head>
 <body class="parchment">
@@ -10,13 +12,20 @@
   <div class="header">Notepad:</div>
 
 <ul>
+  <div class="notes_list">
   <% @notes.each do |note| %>
   <li><%= note.text %></li> <%= link_to "edit", edit_note_path(note.id) %>
 <% end %>
+</div>
 </ul>
-Write a <%= link_to "new note", new_note_url %>
-Return to the <%= link_to "Foyer", rooms_path %>
-Venture a <%= link_to "guess", new_guess_url %>
+
+<div class="notes_links">
+
+Write a <%= link_to "new note", new_note_url %>      ||
+     Return to the <%= link_to "Foyer", rooms_path %>      ||
+     Venture a <%= link_to "guess", new_guess_url %> ||
+     <%= link_to "Logout", logout_path %>
+</div>
 
 </div>
 

@@ -15,3 +15,21 @@
  *= require_tree
  */
 @import 'bootstrap';
+a:link {
+  color: #826317;
+}
+
+/* visited link */
+a:visited {
+  color: #826317;
+}
+
+/* mouse over link */
+a:hover {
+  color: #bfb293;
+}
+
+/* selected link */
+a:active {
+  color: #bfb293;
+}
